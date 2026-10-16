@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+
+<style>
+    body {
+        background: #161213;
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-variation-settings:
+            "wdth" 100;
+        margin: 0;
+        overflow-x: hidden;
+        color: rgb(236, 229, 229);
+
+    }
+
+    body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0) 60%, #ffae0018 100%);
+  pointer-events: none;
+  z-index: 3;
+
+}
+
+    .dylm {
+        border: 2px solid #ff8800;
+        width: 220px;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px #ff8800;
+        background: linear-gradient(20deg, transparent, #ff880057);
+    }
+
+    .dylms,
+    .dylmd {
+        text-align: center;
+    }
+
+    .YHI {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid #ff8800;
+        box-shadow: 0px 0px 10px #ff8800;
+        background: linear-gradient(20deg, transparent, #ff880057);
+        color: rgb(236, 229, 229);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .YHI:has(.btn:focus)~.APUP {
+        display: block;
+        margin-top: 60px;
+    }
+
+    .YHI:has(.btn:focus)+.NI {
+        display: none;
+    }
+
+
+
+    .btn {
+        background-color: #161213;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        color: rgb(236, 229, 229);
+         background: linear-gradient(20deg, transparent, #ff880057);
+            padding: 15px;
+        }
+
+    .APU {
+        font-size: 20px;
+        border: 3px solid #ff8800;
+        box-shadow: 0px 0px 10px #ff8800;
+        background: linear-gradient(20deg, transparent, #ff880057);
+        border-radius: 7px;
+        width: fit-content;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .APUP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 46vh;
+        display: none;
+    }
+
+
+    .NI {
+        border: 2px solid #ff8800;
+        box-shadow: 0px 0px 10px #ff8800;
+        background: linear-gradient(20deg, transparent, #ff880057);
+        width: fit-content;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+
+    .NI:hover {
+        position: absolute;
+        top: 60%;
+        left: 46.4%;
+    }
+</style>
+
+<body>
+
+
+
+
+    <!-- <span
+            style="border: 1px solid black; display: block; width: 100%;margin-bottom: 10px;text-align: center;padding: 5px;">
+            Youtube:@RonyTechWorld;
+        </span> -->
+
+    <div class="dylm">
+
+        <div class="dylmd">Do you love me?</div>
+        <div class="dylms">♥️</div>
+    </div>
+    <div class="YHI">
+        <button class="btn">
+            <span class="yes">Yes♥️</span>
+            <span class="Yeah">I Love You♥️</span>
+        </button>
+    </div>
+
+    <div class="NI">
+        <span class="NIS">NO💔</span>
+        <span class="NISS">I Don't Like You.</span>
+    </div>
+
+    <!-- Popup Box -->
+    <div class="APUP">
+        <div class="APU">Thanks For Accept♥️</div>
+    </div>
+
+</body>
+
+</html>

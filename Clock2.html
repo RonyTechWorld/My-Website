@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+    body {
+        background: rgb(1, 3, 30);
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+
+    .pd {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: linear-gradient(140deg, #fda3a3ef, #ffa20098);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #ffa200;
+    }
+
+
+    .pd1 {
+        font-size: 40px;
+        position: absolute;
+        left: 45%;
+        right: 55%;
+        top: 2px;
+    }
+
+    .pd3 {
+        font-size: 40px;
+        position: absolute;
+        left: 48%;
+        right: 52%;
+        bottom: 2px;
+    }
+
+    .pd2 {
+        font-size: 40px;
+        position: absolute;
+        right: 10px;
+    }
+
+    .pd4 {
+        font-size: 40px;
+        position: absolute;
+        left: 10px;
+    }
+
+
+    .second {
+        height: 200px;
+        width: 2px;
+        background: red;
+        position: absolute;
+        top: 50.2px;
+        z-index: 3;
+        transform-origin: bottom center;
+        border-radius: 8px;
+        animation: ra 60s steps(60) infinite;
+    }
+
+    .minit {
+        height: 173px;
+        width: 3px;
+        background: rgb(162, 0, 255);
+        position: absolute;
+        top: 77.2px;
+        z-index: 2;
+        transform-origin: bottom center;
+        border-radius: 7px;
+        animation: ra 3600s linear infinite;
+    }
+
+    .hour {
+        height: 130px;
+        width: 3.5px;
+        background: green;
+        position: absolute;
+        top: 120.2px;
+        z-index: 1;
+        transform-origin: bottom center;
+        border-radius: 7px;
+        animation: ra 43200s linear infinite;
+    }
+
+    .center-dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: rgb(1, 3, 30);
+        z-index: 5;
+    }
+
+    @keyframes ra {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+</style>
+
+<body>
+    <div class="pd">
+
+        <div class="pd1">12</div>
+        <div class="pd2">3</div>
+        <div class="pd3">6</div>
+        <div class="pd4">9</div>
+
+        <div class="hour"></div>
+        <div class="minit"></div>
+        <div class="second"></div>
+        <div class="center-dot"></div>
+
+    </div>
+</body>
+
+</html>
