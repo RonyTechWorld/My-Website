@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service | Rony Khan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050814;
+      --card: #0b0f1c;
+      --amber: #f59e0b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --line: rgba(245, 158, 11, .25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px
+    }
+
+    body {
+      font-family: 'Roboto', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      background-image: linear-gradient(rgba(245, 158, 11, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 158, 11, .06) 1px, transparent 1px);
+      background-size: 75px 75px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--amber);
+      outline-offset: 3px
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(5, 8, 20, .88);
+      backdrop-filter: blur(4px);
+      border-bottom: 1px solid rgba(148, 163, 184, .2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header a {padding: 15px;}
+ 
+
+    .links {
+      display: flex;
+      gap: 36px;
+      font-weight: 500;
+      font-size: .95rem
+    }
+
+    .links a:hover,
+    .links a.active {
+      color: var(--amber)
+    }
+
+    .btn-hire {
+      border: 1px solid var(--line);
+      color: var(--amber);
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: .9rem;
+      background: #050814
+    }
+
+    .btn-hire:hover {
+      background: var(--amber);
+      color: #050814
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 40px
+    }
+
+    .eyebrow {
+      color: var(--amber);
+      letter-spacing: 3px;
+      font-size: 1.05rem
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      margin: 10px 0 14px;
+      line-height: 1.2
+    }
+
+    .hero h1 span {
+      color: var(--amber)
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 1.1rem
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 18px;
+      color: var(--amber);
+      font-weight: 500;
+      font-size: .9rem
+    }
+
+    /* Layout */
+    .wrap {
+      max-width: 1100px;
+      margin: 30px auto 80px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 32px;
+      align-items: start
+    }
+
+    .toc {
+      position: sticky;
+      top: 100px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      background: rgba(245, 158, 11, .04)
+    }
+
+    .toc h2 {
+      font-size: 1rem;
+      color: var(--amber);
+      margin-bottom: 12px
+    }
+
+    .toc a {
+      display: block;
+      padding: 6px 0;
+      color: var(--muted);
+      font-size: .93rem;
+      border-bottom: 1px solid rgba(148, 163, 184, .1)
+    }
+
+    .toc a:last-child {
+      border: 0
+    }
+
+    .toc a:hover {
+      color: var(--amber)
+    }
+
+    .sections {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      background: linear-gradient(160deg, rgba(245, 158, 11, .07), rgba(11, 15, 28, .9))
+    }
+
+    .card header {
+      all: unset;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px
+    }
+
+    .num {
+      width: 44px;
+      height: 44px;
+      flex: none;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(245, 158, 11, .1);
+      color: var(--amber);
+      display: grid;
+      place-items: center;
+      font-weight: 700
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 700
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 10px
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 6px
+    }
+
+    .card li {
+      color: var(--muted);
+      padding-left: 26px;
+      position: relative;
+      margin-bottom: 6px
+    }
+
+    .card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+      font-weight: 700
+    }
+
+    .card strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: .95rem
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(148, 163, 184, .15)
+    }
+
+    th {
+      color: var(--amber);
+      font-weight: 500
+    }
+
+    td {
+      color: var(--muted)
+    }
+
+    .scroll {
+      overflow-x: auto
+    }
+
+    .contact {
+      text-align: center
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--amber);
+      color: #050814;
+      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 6px
+    }
+
+    .cta:hover {
+      filter: brightness(1.1)
+    }
+
+    footer {
+      border-top: 1px solid rgba(245, 158, 11, .3);
+      text-align: center;
+      color: var(--muted);
+      padding: 28px 24px;
+      font-size: .9rem
+    }
+
+    @media (max-width:900px) {
+      .links {
+        display: none
+      }
+
+      .wrap {
+        grid-template-columns: 1fr
+      }
+
+      .toc {
+        position: static
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+      <a class="logo" href="index.html"><img src="INBIO.png" width="100"></a>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">-TERMS-</p>
+    <h1>Terms of <span>Service</span></h1>
+    <p>Clear rules for working together, so both of us know what to expect from every project.</p>
+    <span class="updated">Last updated: November 2026</span>
+  </section>
+
+  <div class="wrap">
+    <aside class="toc" aria-label="Contents">
+      <h2>On this page</h2>
+      <a href="#agreement">1. Agreement</a>
+      <a href="#services">2. Services</a>
+      <a href="#pricing">3. Pricing &amp; payment</a>
+      <a href="#client">4. Your responsibilities</a>
+      <a href="#revisions">5. Revisions</a>
+      <a href="#ownership">6. Ownership</a>
+      <a href="#support">7. Support period</a>
+      <a href="#refunds">8. Refunds &amp; cancellation</a>
+      <a href="#liability">9. Liability</a>
+      <a href="#changes">10. Changes to terms</a>
+      <a href="#contact">11. Contact</a>
+    </aside>
+
+    <main class="sections">
+
+      <section class="card" id="agreement">
+        <header><span class="num">1</span>
+          <h3>Agreement</h3>
+        </header>
+        <p>By hiring me, paying a deposit, or starting a project, you agree to these terms. If you don't agree with any
+          part, please don't start a project with me.</p>
+      </section>
+
+      <section class="card" id="services">
+        <header><span class="num">2</span>
+          <h3>Services</h3>
+        </header>
+        <p>I design and build front-end websites. Every project includes:</p>
+        <ul>
+          <li>Responsive design for mobile, tablet and desktop</li>
+          <li>Clean, organized and optimized HTML, CSS and JavaScript</li>
+          <li>SEO setup at the level of your chosen plan</li>
+        </ul>
+        <p style="margin-top:10px">Anything outside the plan, such as extra pages, custom features or a back-end, is
+          quoted separately before I start it.</p>
+      </section>
+
+      <section class="card" id="pricing">
+        <header><span class="num">3</span>
+          <h3>Pricing &amp; payment</h3>
+        </header>
+        <div class="scroll">
+          <table>
+            <tr>
+              <th>Plan</th>
+              <th>Price</th>
+              <th>Pages</th>
+              <th>Support</th>
+            </tr>
+            <tr>
+              <td>Basic</td>
+              <td>$49 / project</td>
+              <td>Up to 3</td>
+              <td>1 month</td>
+            </tr>
+            <tr>
+              <td>Standard</td>
+              <td>$99 / project</td>
+              <td>Up to 7</td>
+              <td>3 months</td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td>$149 / project</td>
+              <td>Up to 12</td>
+              <td>5 months</td>
+            </tr>
+          </table>
+        </div>
+        <ul style="margin-top:14px">
+          <li>There are no hidden fees. The price on your plan is the price you pay.</li>
+          <li>A 50% deposit is due before work starts. The remaining 50% is due before the final files are delivered.
+          </li>
+          <li>Late payments can pause the project until the balance is paid.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="client">
+        <header><span class="num">4</span>
+          <h3>Your responsibilities</h3>
+        </header>
+        <ul>
+          <li>Send the text, images, logos and other content I need on time.</li>
+          <li>Make sure you have the right to use everything you give me.</li>
+          <li>Reply to questions and approvals within a reasonable time. Long delays may move the delivery date.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="revisions">
+        <header><span class="num">5</span>
+          <h3>Revisions</h3>
+        </header>
+        <p>Each plan includes reasonable revisions to the agreed design and scope. Changes that go beyond the original
+          brief, such as a new layout or extra pages, count as new work and may be charged.</p>
+      </section>
+
+      <section class="card" id="ownership">
+        <header><span class="num">6</span>
+          <h3>Ownership</h3>
+        </header>
+        <ul>
+          <li>After full payment, you own the final website files made for you.</li>
+          <li>Third-party assets, fonts, icons and libraries keep their own licenses.</li>
+          <li>Until payment is complete, all work stays mine.</li>
+          <li>I may show the finished project in my portfolio unless you ask me not to.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="support">
+        <header><span class="num">7</span>
+          <h3>Support period</h3>
+        </header>
+        <p>Support starts on the delivery date and lasts for the time listed in your plan. It covers bug fixes and small
+          updates to what I built. New features and redesigns are not part of support.</p>
+      </section>
+
+      <section class="card" id="refunds">
+        <header><span class="num">8</span>
+          <h3>Refunds &amp; cancellation</h3>
+        </header>
+        <ul>
+          <li>If you cancel before work starts, the deposit is refunded.</li>
+          <li>If you cancel after work starts, the deposit covers the work already done.</li>
+          <li>Because digital work can't be returned, I don't offer refunds after final files are delivered. If
+            something isn't right, tell me and I'll fix it.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="liability">
+        <header><span class="num">9</span>
+          <h3>Liability</h3>
+        </header>
+        <p>I build every site with care, but I can't promise specific results like search rankings, traffic or sales.
+          I'm not responsible for losses caused by third-party hosting, services or content. My total liability is
+          limited to the amount you paid for the project.</p>
+      </section>
+
+      <section class="card" id="changes">
+        <header><span class="num">10</span>
+          <h3>Changes to these terms</h3>
+        </header>
+        <p>I may update these terms from time to time. The date at the top shows when they last changed. A project you
+          already started follows the terms that were active when it began.</p>
+      </section>
+
+      <section class="card contact" id="contact">
+        <header style="justify-content:center"><span class="num">11</span>
+          <h3>Questions?</h3>
+        </header>
+        <p>Ask me before you start and I'll explain anything that isn't clear.</p>
+        <p><a href="mailto:md.ronykhan0174@gmail.com" style="color:var(--amber)">md.ronykhan0174@gmail.com</a> · Dhaka,
+          Bangladesh</p>
+        <a class="cta" href="contact.html">Get in Touch ➜</a>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Rony Khan. All rights reserved.</footer>
+
+</body>
+
+</html>
