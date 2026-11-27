@@ -3,12 +3,12 @@ const toggleBtn = document.getElementById("themeToggle");
 
 function applyTheme(theme) {
   if (theme === "day") {
-    themeLink.setAttribute("href", "style.css");
-    if (toggleBtn) toggleBtn.textContent = "🌙"; // Day মোডে থাকলে Night-এ যাওয়ার ইঙ্গিত
+    themeLink.setAttribute("href", "portfolio.css");
+    if (toggleBtn) toggleBtn.textContent = "☀️"; // Day মোডে থাকলে Night-এ যাওয়ার ইঙ্গিত
     localStorage.setItem("selectedTheme", "day");
   } else {
-    themeLink.setAttribute("href", "portfolio.css");
-    if (toggleBtn) toggleBtn.textContent = "☀️"; // Night মোডে থাকলে Day-তে যাওয়ার ইঙ্গিত
+    themeLink.setAttribute("href", "style.css");
+    if (toggleBtn) toggleBtn.textContent = "🌙"; // Night মোডে থাকলে Day-তে যাওয়ার ইঙ্গিত
     localStorage.setItem("selectedTheme", "night");
   }
 }
